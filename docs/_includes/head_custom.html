@@ -1,0 +1,44 @@
+<!-- Custom head content -->
+
+<!-- JetBrains Mono font because we ain't using Comic Sans fr fr -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap" rel="stylesheet">
+
+<!-- Our custom styles that hit different -->
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+<!-- Quantum JavaScript enhancements -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add that quantum hover effect to code blocks
+    document.querySelectorAll('pre.highlight').forEach(block => {
+      block.addEventListener('mousemove', (e) => {
+        const rect = block.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        block.style.background = `
+          radial-gradient(
+            circle at ${x}px ${y}px,
+            rgba(0, 255, 157, 0.1),
+            transparent 128px
+          ),
+          #1a1f35
+        `;
+      });
+
+      block.addEventListener('mouseleave', () => {
+        block.style.background = '#1a1f35';
+      });
+    });
+
+    // Add that smooth scroll energy
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  });
+</script>

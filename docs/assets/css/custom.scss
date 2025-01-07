@@ -1,0 +1,126 @@
+---
+---
+
+// Quantum variables that hit different fr fr
+$background-color: #0a0e1a;  // Darker than my future
+$text-color: #e0e0ff;        // Text brighter than my ideas at 3 AM
+$accent-color: #00ff9d;      // More neon than a cyberpunk nightclub
+$code-bg: #1a1f35;           // Code blocks looking clean fr fr
+
+// Base styles hitting different
+body {
+  background: $background-color;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(0, 255, 157, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(98, 0, 255, 0.03) 0%, transparent 20%);
+  color: $text-color;
+  font-family: 'JetBrains Mono', monospace;  // That developer font drip
+}
+
+// Headers looking cleaner than my git history
+h1, h2, h3, h4, h5, h6 {
+  background: linear-gradient(120deg, $accent-color, #62f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+
+  &:before {
+    content: "// ";
+    opacity: 0.5;
+  }
+}
+
+// Code blocks more styled than my Discord profile
+pre.highlight {
+  background: $code-bg;
+  border-radius: 8px;
+  border-left: 4px solid $accent-color;
+  box-shadow: 0 4px 20px rgba(0, 255, 157, 0.1);
+}
+
+// Links hitting different than quantum entanglement
+a {
+  color: $accent-color;
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, $accent-color, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}
+
+// Navigation menu looking more organized than my thoughts
+.side-bar {
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+// Tables cleaner than my browser history
+table {
+  background: $code-bg;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 157, 0.1);
+
+  th {
+    background: rgba(0, 255, 157, 0.1);
+  }
+}
+
+// Buttons looking more based than my commit messages
+.btn {
+  background: linear-gradient(45deg, darken($accent-color, 20%), $accent-color);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 255, 157, 0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 157, 0.3);
+  }
+}
+
+// Search bar more quantum than Heisenberg's uncertainty
+.search {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 157, 0.2);
+  border-radius: 8px;
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: $accent-color;
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.2);
+  }
+}
+
+// Custom scrollbar because we ain't basic
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, $accent-color, #62f);
+  border-radius: 4px;
+
+  &:hover {
+    background: $accent-color;
+  }
+}

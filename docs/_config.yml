@@ -1,12 +1,10 @@
-remote_theme: pmarsceill/just-the-docs
-
 # Site settings
 title: SmolSwarms Docs
 description: Documentation that hits different fr fr 🌊
-baseurl: "/smolswarms"
-url: "https://ultrainstinct0x.github.io"
+baseurl: "/smolswarms"  # THIS BE CRITICAL FR FR
+url: "https://ultrainstinct0x.github.io"  # The quantum realm where our docs live
 
-# Theme settings
+remote_theme: pmarsceill/just-the-docs
 color_scheme: dark
 search_enabled: true
 heading_anchors: true
@@ -15,18 +13,23 @@ heading_anchors: true
 aux_links:
   "SmolSwarms on GitHub":
     - "//github.com/ultrainstinct0x/smolswarms"
+  "Join our Discord":
+    - "//discord.gg/smolswarms"
 
-# Makes Aux links open in a new tab
+# Makes Aux links open in a new tab (like my 47 Stack Overflow tabs)
 aux_links_new_tab: true
 
-# Custom footer content
-footer_content: "No cap, just clean docs fr fr 🚀"
+# Footer content more meaningful than my commit messages
+footer_content: "No cap, just clean docs fr fr 🚀 | Made with 🧠 by UltraInstinct0x"
 
-# Back to top link
+# Back to top link (for when you're down bad in the docs)
 back_to_top: true
 back_to_top_text: "Back to top"
 
-# Collections for docs structure
+# Enable copy buttons on code blocks (because we ain't gatekeeping knowledge fr fr)
+enable_copy_code_button: true
+
+# Collections for that organized documentation life
 collections:
   guides:
     permalink: "/:collection/:path/"
@@ -35,15 +38,28 @@ collections:
     permalink: "/:collection/:path/"
     output: true
 
-# Default YAML frontmatter settings
+# Default YAML frontmatter settings (more default than my sleep schedule)
 defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
+  - scope:
+      path: ""
     values:
       layout: "default"
-  -
-    scope:
-      path: "_guides"
+  - scope:
+      path: "guides"
     values:
-      layout: "guide"
+      layout: "page"
+      nav_exclude: false
+  - scope:
+      path: "reference"
+    values:
+      layout: "page"
+      nav_exclude: false
+
+# Navigation
+nav_external_links:
+  - title: GitHub Repo
+    url: https://github.com/ultrainstinct0x/smolswarms
+    hide_icon: false
+  - title: Discord Community
+    url: https://discord.gg/smolswarms
+    hide_icon: false
