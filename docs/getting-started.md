@@ -157,9 +157,9 @@ swarm.set_monitoring_level("paranoid")
 
 Now that you're up and running:
 
-1. Check out our [Examples](./examples.html) for more inspiration
-2. Read the [API Reference](./api-reference.html) for the deep lore
+1. Check out our [Examples](examples.html) for more inspiration
+2. Read the [API Reference](api-reference.html) for the deep lore
 3. Join our [Discord](https://discord.gg/smolswarms) to vibe with other developers
-4. Consider [Contributing](./contributing.html) to make SmolSwarms even more based
+4. Consider [Contributing](https://github.com/ultrainstinct0x/smolswarms/blob/main/CONTRIBUTING.md) to make SmolSwarms even more based
 
 Remember: With great power comes great responsibility... and with SmolSwarms, you've got more power than a Discord mod during a raid! 💪
