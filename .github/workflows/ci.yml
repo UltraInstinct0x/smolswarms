@@ -2,38 +2,64 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
   pull_request:
-    branches: [ main ]
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'docs/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true  # Cancel any % runs when new commits drop
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-      - run: |
+          
+      - name: Install dependencies
+        run: |
           python -m pip install --upgrade pip
           pip install -e .[dev]
-      - run: ruff check .
-      - run: black . --check
-      - run: mypy smolswarms/
+          
+      - name: Vibe check with ruff
+        run: ruff check .
+        
+      - name: Format check with black
+        run: black . --check
+        
+      - name: Type check with mypy
+        run: mypy smolswarms/
 
   test:
-    needs: lint
+    needs: lint  # Gotta pass the vibe check first
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11"]
+        python-version: ["3.10", "3.11"]  # Only modern Python fr fr
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
-      - run: |
+          
+      - name: Install dependencies
+        run: |
           python -m pip install --upgrade pip
           pip install git+https://github.com/UltraInstinct0x/smolagents.git
           pip install -e .[dev]
-      - run: pytest --cov=smolswarms
+          
+      - name: Run tests
+        run: pytest --cov=smolswarms
