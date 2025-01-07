@@ -8,34 +8,34 @@ version = "0.1.0"
 description = "Spawn and orchestrate autonomous AI agent swarms that actually do be hitting different fr fr"
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.10"  # Bumped up to match smolagents' energy
+requires-python = ">=3.10"
 authors = [
     { name = "Gokhan Guney", email = "your.email@example.com" },
 ]
 dependencies = [
-    "smolagents>=1.1.0.dev0",  # Fresh from the repo
+    "smolagents @ git+https://github.com/UltraInstinct0x/smolagents.git",  # Straight from the source, no cap
     "pydantic>=2.0.0",
-    "rich>=13.9.4",  # Matching smolagents' version for that consistent drip
+    "rich>=13.9.4",
     "typer>=0.9.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=8.1.0",  # Updated to match smolagents test deps
+    "pytest>=8.1.0",
     "pytest-cov>=4.0.0",
     "black>=23.0.0",
-    "ruff>=0.5.0",  # Bumped to match smolagents
+    "ruff>=0.5.0",
     "mypy>=1.0.0",
-    "types-all",
 ]
 
 [tool.black]
 line-length = 88
-target-version = ['py310']  # Updated for that 3.10 life
+target-version = ['py310']
 
 [tool.ruff]
 line-length = 88
 target-version = "py310"
+select = ["E", "F", "B", "I", "ALL"]
 
 [tool.mypy]
 python_version = "3.10"
