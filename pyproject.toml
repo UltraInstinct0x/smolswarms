@@ -43,11 +43,19 @@ select = [
     "B",  # flake8-bugbear
     "I",  # isort
 ]
-ignore = []
 
 [tool.ruff.lint.isort]
-known-first-party = ["smolswarms"]
 force-single-line = true
+lines-between-types = 1
+order-by-type = true
+known-first-party = ["smolswarms"]
+sections = [
+    "FUTURE",
+    "STDLIB",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
 
 [tool.mypy]
 python_version = "3.10"
