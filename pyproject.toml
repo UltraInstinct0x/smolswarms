@@ -1,3 +1,9 @@
+[tool.poetry]
+name = "smolswarms"
+version = "0.1.0"
+description = "A framework that makes AI agent spawning go brr while keeping it more stable than a Redstone computer!"
+authors = ["Your Name <your.email@example.com>"]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
