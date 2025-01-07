@@ -24,7 +24,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: OpenHands Magic ✨
-        uses: all-hands-ai/openhands-resolver@latest
+        uses: All-Hands-AI/OpenHands@main
+        with:
+          path: openhands/resolver
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LLM_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
