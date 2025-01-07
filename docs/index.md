@@ -1,68 +1,78 @@
 ---
-layout: default
+layout: home
 title: Home
 nav_order: 1
-description: "SmolSwarms Documentation - Because why spawn one AI when you can spawn them all fr fr 🤖"
-permalink: /
 ---
 
-# SmolSwarms Documentation
-{: .fs-9 }
+# SmolSwarms 🤖
 
-Spawn and orchestrate autonomous AI agent swarms that actually do be hitting different fr fr 🌊
-{: .fs-6 .fw-300 }
+Welcome to SmolSwarms, where we're building swarms of AI agents that hit different fr fr! This ain't your grandma's multi-agent system - we're talking next-level coordination with that zoomer energy 🚀
 
-[Get Started](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View it on GitHub](https://github.com/ultrainstinct0x/smolswarms){: .btn .fs-5 .mb-4 .mb-md-0 }
+## What's the Vibe? ✨
 
----
+SmolSwarms is a Python library that lets you create and coordinate swarms of AI agents with less effort than explaining a meme to your parents. We're all about:
 
-## Getting Started
+- 🎮 **Agent Coordination**: Organize your AI agents better than your Discord server
+- 🧠 **Swarm Intelligence**: Because two heads are better than one (and 100 heads are even better)
+- 🔄 **Dynamic Scaling**: Scale your swarms up and down smoother than your Spotify crossfade
+- 🤝 **OpenHands Integration**: AI helping AI, we really in the future fr fr
+- 🛡️ **Token Management**: Keep those API costs lower than your motivation on Monday mornings
 
-You ever look at an AI agent and think "what if there were more of them?" Well, you've come to the right place fr fr. SmolSwarms is basically Kubernetes but for AI agents (and 100% more cursed).
+## Quick Start 🚀
 
 ```python
-from smolswarms import SwarmFactory
+from smolswarms import SwarmFactory, Agent
 
-# Spawn your corporate hivemind in 3 lines no cap
+# Create a swarm factory (spawning agents like they're Minecraft villagers)
 factory = SwarmFactory()
-swarm = factory.spawn_department({
-    "business_unit": "growth_team",
-    "budget": "infinite_money_glitch",
-    "vibe": "hypergrowth"
-})
 
-# Watch the magic happen
-swarm.execute_autonomously()
+# Define your agent's personality (more unique than your Discord PFP)
+agent_config = {
+    "personality": "zoomer",
+    "energy_level": "caffeinated",
+    "communication_style": "memes"
+}
+
+# Spawn your first agent (it's alive!)
+agent = factory.create_agent(config=agent_config)
+
+# Let it cook
+agent.do_something_cool()
 ```
 
-## Why SmolSwarms Though?
+## Features That Slap 💯
 
-- 🏭 **Agent Factory System**: Spawning specialized AI agents faster than you can say "recursive automation"
-- 🧠 **Big Brain Energy**: Uses Claude-3 as the director agent to design optimal architectures
-- 💰 **Token Economic Policy**: Built-in optimization to keep your OpenAI bill from going to the moon
-- 🤝 **Agent Communication Protocol**: They're like Discord servers but for AI agents
-- 🛡️ **Safety First**: Sandboxed execution environments because we ain't trying to speedrun Skynet
+- **Recursive Agent Spawning**: It's agents all the way down
+- **Cross-Swarm Communication**: Your agents will be sliding into each other's DMs
+- **Memory Persistence**: More reliable than your commitment to inbox zero
+- **Token Economy**: Managing resources better than your crypto portfolio
+- **Self-Optimization**: These agents level up faster than your gaming skills
 
-## Useful Links
+## Installation 📦
 
-- [Changelog](/changelog) - What's new in these streets
-- [Roadmap](/roadmap) - Where we're going (where we're going we don't need roads)
-- [Contributing Guide](/contributing) - How to make this project more based
-- [API Reference](/reference) - The sacred texts
+```bash
+pip install smolswarms  # real ones use pip
+```
 
-## About the project
+## Documentation 📚
 
-SmolSwarms is more open-source than my emotional baggage fr fr. We out here trying to make multi-agent systems more accessible than a Discord server with no verification.
+Check out our docs (you're looking at them rn) for:
+- [Getting Started](./getting-started.html) - Zero to hero, no cap
+- [API Reference](./api-reference.html) - The sacred texts
+- [Examples](./examples.html) - See it in action
+- [Changelog](../CHANGELOG.md) - What's new in the multiverse
 
-### License
+## Contributing 🤝
 
-SmolSwarms is distributed under the [MIT License](https://github.com/ultrainstinct0x/smolswarms/blob/main/LICENSE).
+We're always looking for more agents to join our swarm! Check out our [Contributing Guide](../CONTRIBUTING.md) to learn how to:
+- Report bugs (the uncool kind)
+- Suggest features (the cool kind)
+- Submit PRs (the really cool kind)
 
-### Contributing
+## License 📜
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in our [Contributing Guide](contributing).
+SmolSwarms is MIT licensed, because we ain't about that gatekeeping life fr fr.
 
-### Code of Conduct
+---
 
-Just don't be more toxic than a League of Legends lobby fr fr. Read more in our [Code of Conduct](code-of-conduct).
+*Remember: With great power comes great responsibility... and with SmolSwarms, you've got more power than a Discord mod during a raid.* 💪
