@@ -13,7 +13,6 @@ authors = [
     { name = "Gokhan Guney", email = "your.email@example.com" },
 ]
 dependencies = [
-    "smolagents>=0.1.0",
     "pydantic>=2.0.0",
     "rich>=10.0.0",
     "typer>=0.9.0",
@@ -26,6 +25,7 @@ dev = [
     "black>=23.0.0",
     "ruff>=0.0.291",
     "mypy>=1.0.0",
+    "types-all",
 ]
 
 [tool.black]
