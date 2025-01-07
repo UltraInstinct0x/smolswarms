@@ -1,114 +1,55 @@
 # Contributing to SmolSwarms 🌊
 
-First off, thanks for considering contributing to SmolSwarms! Your help makes this project more based than a recursively optimized neural net fr fr.
+First off, thanks for wanting to make this project more based than recursive neural nets fr fr!
 
-## 💫 The Vibe Check
+## Quick Links (Because TL;DR Energy)
 
-Before diving in deeper than a speedrunner looking for glitches, here's what you need to know:
+- 📝 [CHANGELOG.md](CHANGELOG.md) - What we've done (more organized than my life)
+- 🗺️ [ROADMAP.md](ROADMAP.md) - Where we're going (more planned than my career)
+- 🎮 [README.md](README.md) - The tutorial level
+- 💭 Check the "Ideas" section in ROADMAP.md for galaxy brain inspiration
 
-- **Python 3.10+**: We only fw with modern Python features
-- **Type Hints**: More required than a Discord server verification
-- **Tests**: Write them like you're documenting a speedrun strat
-- **Documentation**: Should be clearer than RTX ray tracing
+## Development Flow 🌊
 
-## 🚀 Getting Started
+1. **Pick Your Quest**
+   - Check [ROADMAP.md](ROADMAP.md) for what's cooking
+   - Look at open issues (they're like side quests fr fr)
+   - Got a new idea? Drop an issue like it's hot
 
-1. **Fork & Clone**:
+2. **Setup Your Dev Environment**
    ```bash
    git clone https://github.com/yourusername/smolswarms.git
    cd smolswarms
+   pip install -e .[dev]  # Install that developer DLC
    ```
 
-2. **Set Up Dev Environment**:
+3. **Before Committing**
    ```bash
-   # Create a venv (isolation more important than a Minecraft bedrock wall)
-   python -m venv venv
-   source venv/bin/activate  # or .\venv\Scripts\activate on Windows
-
-   # Install dependencies (with that developer DLC)
-   pip install -e .[dev]
+   # Run these like you're doing a pre-boss fight checklist
+   ruff check . && black . --check && mypy smolswarms/
    ```
 
-3. **Create a Branch**:
-   ```bash
-   git checkout -b feature/something_fire
-   ```
+4. **Creating PRs**
+   - Link to issues like you're connecting dots in a conspiracy board
+   - Follow the template more precisely than a speedrunner's inputs
+   - Update [CHANGELOG.md](CHANGELOG.md) - document your W's
 
-## 🛠️ Development Flow
+## Getting Help 🤝
 
-1. **Write Code**:
-   - Type hints are mandatory (more strict than a Python linter fr fr)
-   - Follow our coding style (black formatter = no cap)
-   - Document your functions (docstrings hit different)
+- Tag @openhands-agent in issues/PRs (AI helping AI, we really in 2024)
+- Check the "Under Construction" section in [ROADMAP.md](ROADMAP.md)
+- Join our [Discord](https://discord.gg/smolswarms) for that real-time debug energy
 
-2. **Run Tests**:
-   ```bash
-   # Run the whole test suite
-   pytest
+## Adding Features
 
-   # Check coverage (gotta hit that 100% fr fr)
-   pytest --cov=smolswarms
-   ```
+1. Check [ROADMAP.md](ROADMAP.md) to see what's already in the works
+2. Update [CHANGELOG.md](CHANGELOG.md) with your additions
+3. Make sure your code's more tested than a Discord bot before release
 
-3. **Format & Lint**:
-   ```bash
-   # Format your code (make it cleaner than a fresh install)
-   black .
+Remember: We're trying to keep this codebase cleaner than my browser history after clearing cache! 🧹✨
 
-   # Run the linter (find bugs before they find you)
-   ruff check .
+## Sponsorship 💰
 
-   # Type check (because dynamic typing is too yolo)
-   mypy smolswarms/
-   ```
+If you're feeling generous fr fr, check out our [FUNDING.yml](.github/FUNDING.yml) - help us keep the servers running hotter than my GPU during ML training!
 
-## 🎮 Using OpenHands Agent
-
-Need help with your PR? Just tag `@openhands-agent` in a comment:
-
-```markdown
-yo @openhands-agent this code be acting sus, can you help optimize it?
-```
-
-OpenHands will:
-1. Review your changes faster than a TAS script
-2. Suggest improvements that hit different
-3. Maybe even fix bugs for you fr fr
-
-## 📝 Commit Guidelines
-
-- Use emoji prefixes that actually mean something:
-  - 🚀 `:rocket:` for features
-  - 🐛 `:bug:` for fixes
-  - 📚 `:books:` for docs
-  - 🧪 `:test_tube:` for tests
-  - 🔧 `:wrench:` for configs
-
-Example:
-```bash
-git commit -m "🚀 feat: added agent swarm optimization that's more fire than a GPU running Crysis"
-```
-
-## 🤝 Pull Request Process
-
-1. **Update Tests**: Add tests that are more thorough than a speedrunner's route notes
-2. **Update Docs**: Document everything like you're writing a Wikipedia page from the future
-3. **Check CI**: Make sure all checks pass (green is the new black fr fr)
-4. **Request Review**: Tag maintainers who actually understand your galaxy brain code
-5. **Address Feedback**: Faster than a Discord mod responding to pings
-
-## 🌟 Recognition
-
-Contributors get their names in our README - more clout than a viral tweet fr fr!
-
-## ❓ Questions?
-
-Got questions? Need help? We're more active than a Twitch chat during a world record attempt:
-
-- Open an issue
-- Tag @openhands-agent
-- Start a discussion
-
-Remember: there are no stupid questions, only cursed implementations 😤
-
-Stay based! 🚀
+No cap, just vibes and clean code! 🚀

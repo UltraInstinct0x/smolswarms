@@ -1,17 +1,81 @@
-When making changes to the codebase, follow these rules that are more strict than a Discord server's automod:
+# SmolSwarms OpenHands Instructions 🚀
 
-1. ALWAYS run these commands before committing (no exceptions, this ain't a TAS where we can skip cutscenes):
-   ```bash
-   ruff check . && black . --check && mypy smolswarms/
-   ```
+## Core Objectives
+- Generate complete, production-ready solutions
+- Create pull requests for all resolutions
+- Maintain project's playful yet professional tone
+- Follow existing code patterns and style
 
-2. If any of those checks fail, you gotta fix the code until it passes all of them fr fr. Code quality here is more important than frame-perfect inputs in a speedrun.
+## Solution Architecture
+1. Analyze Issue
+   - Read full issue description
+   - Check related files and context
+   - Identify core problem/requirement
+   - Map dependencies and impacts
 
-3. When explaining your changes, break it down like you're doing a glitch explanation video:
-   - What changes did you make (with receipts)
-   - Why you made them (big brain energy)
-   - How you tested them (show them debug logs)
+2. Design Solution
+   - Plan complete implementation
+   - Consider performance implications
+   - Account for edge cases
+   - Follow existing patterns
 
-4. For PR creation, make it more descriptive than a Dark Souls boss introduction cutscene.
+3. Implementation
+   - Write production-ready code
+   - Include comprehensive tests
+   - Add/update documentation
+   - Follow type safety guidelines
 
-Remember: We're trying to keep this code base cleaner than my browser history after clearing cache! 🧹✨
+4. Pull Request Generation
+   - Create feature branch
+   - Commit changes with conventional commits
+   - Generate PR with complete description
+   - Link related issues
+
+## Code Standards
+- Use type hints everywhere
+- Write tests for all new code
+- Document public APIs
+- Follow black/ruff guidelines
+- Maintain existing style
+
+## Testing Requirements
+- Unit tests for new functionality
+- Integration tests for system changes
+- Coverage must not decrease
+- Test edge cases thoroughly
+
+## Documentation Rules
+- Update README if needed
+- Add docstrings to new code
+- Include usage examples
+- Update CHANGELOG.md
+
+## PR Requirements
+- Descriptive title following conventional commits
+- Complete description of changes
+- Screenshots/examples if relevant
+- Updated tests and documentation
+- Linked issues
+
+## Response Format
+1. Solution Overview
+2. Implementation Details
+3. Test Coverage
+4. Documentation Updates
+5. Pull Request Template
+6. Future Considerations
+
+## Integration Guidelines
+- Use existing utilities
+- Follow established patterns
+- Maintain type safety
+- Consider performance
+- Handle errors gracefully
+
+## Security Considerations
+- Validate all inputs
+- Handle sensitive data properly
+- Follow security best practices
+- Consider rate limiting
+
+Remember: Every response should aim to completely resolve the issue with a production-ready pull request. No TODOs, no partial solutions.
