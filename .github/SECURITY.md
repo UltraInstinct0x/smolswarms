@@ -4,14 +4,14 @@
 
 If you discover a security vulnerability in this project, please report it to us. We take security issues seriously and will respond promptly to address them.
 
-To report a vulnerability, please email [your.email@example.com] with the details of the issue. Include as much information as possible to help us understand and resolve the problem quickly.
+To report a vulnerability, please email [g_guney@icloud.com](g_guney@icloud.com) with the details of the issue. Include as much information as possible to help us understand and resolve the problem quickly.
 
 We appreciate your efforts to responsibly disclose vulnerabilities and will make every effort to acknowledge your contributions.
 
 **Please do NOT report security vulnerabilities through public GitHub issues.**
 
 Instead, please report them via email to:
-- [Your security email - to be configured by repository owner]
+- [g_guney@icloud.com](g_guney@icloud.com)
 
 Please include the following information:
 - Description of the vulnerability
