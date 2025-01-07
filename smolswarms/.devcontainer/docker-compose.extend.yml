@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # Our quantum sauce
+  smolswarms-api:
+    build:
+      context: ../
+      dockerfile: packages/api/Dockerfile
+    environment:
+      - NODE_ENV=development
+      - PORT=8000
+    volumes:
+      - ..:/workspace:cached
+    command: npm run dev
+
+  # Dev tools that hit different
+  adminer:  # DB management more organized than my browser tabs
+    image: adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+
+  # Monitoring because we professional even in dev
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+
+volumes:
+  grafana_data: 

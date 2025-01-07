@@ -1,0 +1,54 @@
+# Configuration hitting different fr fr
+app:
+  title: "SmolSwarms Chat"
+  default_model: "swarm-gpt"  # Our blessed model
+  plugins:
+    - swarm  # Only what we need
+
+auth:
+  method: "local"  # Keep it simple
+  session_expiry: "7d"
+  registration:
+    enabled: true
+    domains_whitelist: []  # Open like my Chrome tabs
+
+endpoints:
+  - id: "swarm-gpt"
+    name: "SwarmGPT"
+    provider: "swarm"
+    model_config:
+      max_agents: 5
+      strategy: "collaborative"
+      memory_type: "persistent"
+
+# UI simplified like my commit messages
+interface:
+  theme: "dark"  # Because we ain't trying to burn retinas
+  features:
+    - chat
+    - agents
+    - swarms
+  disabled_features:  # Keep it focused fr fr
+    - plugins
+    - custom_endpoints
+    - model_selection
+    - temperature_control
+
+# Swarm integration that goes hard
+swarm:
+  api_url: "http://api:8000"  # Our quantum bridge
+  max_tokens: 1000
+  timeout: 30
+  retry:
+    max_attempts: 3
+    backoff: 1.5
+
+# Persistence cleaner than my git history
+storage:
+  type: "postgres"  # No SQLite in this house
+  url: "${DATABASE_URL}"
+
+# Metrics because we professional fr fr
+telemetry:
+  enabled: true
+  endpoint: "http://metrics:9090" 

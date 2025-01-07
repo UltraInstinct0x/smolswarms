@@ -8,15 +8,28 @@ nav_order: 2
 
 Let's get you up and running with SmolSwarms faster than you can say "recursive automation" fr fr!
 
-## Prerequisites 📋
+## Quick Start with Docker 🐳
 
-Before we start cooking, make sure you've got:
+The fastest way to get started is using our Docker setup (based on the amazing LibreChat project):
 
-- Python 3.8+ installed (we ain't living in 2.7 no more)
-- pip (the real ones know)
-- A burning desire to spawn AI agents
+```bash
+# Clone with all the quantum sauce
+git clone --recursive https://github.com/ultrainstinct0x/smolswarms.git
 
-## Installation 💿
+# Enter the quantum realm
+cd smolswarms/apps/chat
+
+# Copy example configs (and edit them if needed)
+cp librechat/.env.example .env
+cp librechat/docker-compose.override.yml.example docker-compose.override.yml
+
+# Let it cook
+docker compose -f librechat/docker-compose.yml -f docker-compose.override.yml up
+```
+
+## Manual Installation 💿
+
+If you prefer to run things manually (you brave soul):
 
 ```bash
 # Install from PyPI (the blessed way)

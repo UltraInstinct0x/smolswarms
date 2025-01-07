@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # The quantum chat interface fr fr
+  chat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=postgres://swarms:${DB_PASSWORD}@db:5432/swarms
+      - REDIS_URL=redis://cache:6379
+    depends_on:
+      - api
+      - db
+      - cache
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Our blessed API
+  api:
+    build:
+      context: ../../packages/api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - DATABASE_URL=postgres://swarms:${DB_PASSWORD}@db:5432/swarms
+    depends_on:
+      - db
+
+  # Data persistence more reliable than my memory
+  db:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=swarms
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=swarms
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  # Cache faster than my alt+tab game
+  cache:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache_data:/data
+
+  # Metrics because we ain't playing
+  metrics:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - metrics_data:/prometheus
+
+volumes:
+  db_data:
+  cache_data:
+  metrics_data: 

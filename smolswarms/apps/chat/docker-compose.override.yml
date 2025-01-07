@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    environment:
+      - SWARM_ENABLED=true
+      - SWARM_MAX_AGENTS=10
+      - SWARM_MEMORY_ENABLED=true
+    volumes:
+      - ../../packages/core:/app/packages/core:ro
+      
+  swarm-memory:
+    image: redis:alpine
+    container_name: swarm-memory
+    ports:
+      - "6380:6379"
+    volumes:
+      - swarm_memory_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - librechat
+
+volumes:
+  swarm_memory_data:
+
+networks:
+  librechat:
+    external: true 

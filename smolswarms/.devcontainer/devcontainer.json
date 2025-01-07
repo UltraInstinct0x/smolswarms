@@ -1,0 +1,32 @@
+{
+  "name": "SmolSwarms Development",
+  "dockerComposeFile": [
+    "../apps/chat/librechat/docker-compose.yml",
+    "docker-compose.extend.yml"
+  ],
+  "service": "api",
+  "workspaceFolder": "/workspace",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "GitHub.copilot"
+      ]
+    }
+  },
+
+  "postCreateCommand": "npm install && pip install -e ."
+} 

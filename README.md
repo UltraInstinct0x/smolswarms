@@ -1,138 +1,67 @@
-# 🌊 smolswarms
+# SmolSwarms 🌊
 
-> Because why spawn one AI when you can spawn them all?
+Building swarms of AI agents that hit different fr fr! More autonomous than my coffee machine, more coordinated than my sleep schedule.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
-[![CI](https://github.com/UltraInstinct0x/smolswarms/actions/workflows/ci.yml/badge.svg)](https://github.com/UltraInstinct0x/smolswarms/actions/workflows/ci.yml)
+## What's This? 🤔
 
-smolswarms is a based framework for spawning and orchestrating autonomous AI agent swarms that actually do be hitting different fr fr. Built on top of the absolutely cracked [smolagents](https://github.com/huggingface/smolagents) library, it's like Kubernetes but for AI agents (and 100% more cursed).
+SmolSwarms is a quantum evolution of multi-agent systems, heavily inspired by and building upon some incredible open source projects:
 
-## 🤔 What's the vibe?
+### Standing on the Shoulders of Giants 🙏
 
-Ever wanted to spawn an entire corporate hivemind faster than you can say "recursive automation"? smolswarms got you covered:
+- **[LibreChat](https://github.com/danny-avila/LibreChat)** - Our chat interface and core infrastructure is based on this amazing project. We're incredibly grateful to @danny-avila and all LibreChat contributors for creating such a solid foundation under MIT license. We've modified and extended it to create a specialized swarm-focused experience.
 
-```python
-from smolswarms import SwarmFactory, BusinessUnit
+- **[SmolAgent](https://github.com/smol-ai/agent)** - The OG inspiration for our approach to minimal, effective AI agents. Major props to @swyxio for showing us how to keep it smol and effective.
 
-# Define your swarm requirements (more detailed than a Minecraft crafting recipe)
-unit_spec = BusinessUnit(
-    name="growth_team",
-    core_functions=["user_acquisition", "retention", "analytics"],
-    budget_constraints="reasonable"  # No infinite money glitch... yet
-)
+### What We Added 🚀
 
-# Let it cook fr fr
-factory = SwarmFactory()
-swarm = factory.spawn_business_unit(unit_spec)
+We took LibreChat's solid foundation and added:
+- Swarm coordination protocols that hit different
+- Agent spawning mechanics smoother than my git history
+- Memory systems more persistent than my attention span
+- Token management more optimized than my Chrome tabs
 
-# Watch the magic happen
-results = swarm.execute_strategy("increase_q4_growth")
-print(f"Swarm do be vibing: {results}")
-```
-
-## ✨ Features that go hard
-
-- 🏭 **Agent Factory System**: Spawns specialized AI agents faster than a Discord mod can say "no cap"
-- 🧠 **Big Brain Energy**: Uses Claude-3 as the director agent to design optimal swarm architectures
-- 💰 **Token Economic Policy**: Built-in optimization to keep your API costs from going to the moon
-- 🤝 **Agent Communication Protocol**: They're like Discord servers but for AI agents fr fr
-- 🛡️ **Safety First**: Sandboxed execution environments because we ain't speedrunning the robot apocalypse
-
-## 🚀 Quick Installation
+## Quick Start 🏃‍♂️
 
 ```bash
-# Install with pip (straight from the source no cap)
-pip install git+https://github.com/UltraInstinct0x/smolswarms.git
+# Clone with all the quantum sauce
+git clone --recursive https://github.com/ultrainstinct0x/smolswarms.git
+
+# Enter the quantum realm
+cd smolswarms/apps/chat
+
+# Copy example configs (and edit them if needed)
+cp librechat/.env.example .env
+cp librechat/docker-compose.override.yml.example docker-compose.override.yml
+
+# Let it cook
+docker compose -f librechat/docker-compose.yml -f docker-compose.override.yml up
 ```
 
-## 📚 Advanced Installation
+## Features That Slap 💯
 
-For development mode with all the debug tools (like you're trying to find glitches in the matrix):
+- **Agent Spawning**: Create AI agents faster than I create new Discord servers
+- **Swarm Intelligence**: Because two heads are better than one (and 10 heads are quantum)
+- **Memory Management**: More reliable than my actual memory
+- **Token Economy**: Keep those API costs lower than my motivation on Monday mornings
 
-```bash
-git clone https://github.com/UltraInstinct0x/smolswarms.git
-cd smolswarms
-pip install -e .[dev]  # Install that developer%
-```
+## Development 🛠️
 
-## 🛠️ Usage
+Check out our [Development Guide](docs/development.md) for:
+- Local setup more organized than my browser tabs
+- Testing that actually works
+- Contribution guidelines that make sense
 
-Here's how to spawn your first agent swarm (it's like playing God but with Python):
+## License 📜
 
-```python
-from smolswarms import SwarmFactory
-from smolswarms.specs import AgentSpec
+MIT - Because we believe in open source fr fr. Just like LibreChat and SmolAgent showed us the way, we're keeping it open for the next wave of innovation.
 
-# Create a factory that's more optimized than a TAS speedrun
-factory = SwarmFactory()
+## Acknowledgments 🙏
 
-# Define your agent specs (like character creation but for AI)
-specs = [
-    AgentSpec(role="researcher", skills=["data_analysis", "paper_reading"]),
-    AgentSpec(role="writer", skills=["content_generation", "meme_crafting"]),
-    AgentSpec(role="reviewer", skills=["code_review", "vibe_check"])
-]
+This project wouldn't be possible without:
+- The incredible [LibreChat](https://github.com/danny-avila/LibreChat) project and its amazing community
+- [SmolAgent](https://github.com/smol-ai/agent) for the inspiration
+- The entire open source community fr fr
 
-# Spawn the whole squad
-swarm = factory.spawn_swarm(specs)
+---
 
-# Let them cook
-swarm.execute_task("make_this_repo_more_based")
-```
-
-## 🤝 Contributing
-
-PRs are welcome! Just follow these steps that are more organized than a speedrunner's hotkey setup:
-
-1. Fork it (`https://github.com/UltraInstinct0x/smolswarms/fork`)
-2. Create your feature branch (`git checkout -b feature/something_fire`)
-3. Make your changes (more heat than a Discord server during drama)
-4. Run the tests (`pytest` - because we ain't pushing bugs to prod fr fr)
-5. Commit your changes (`git commit -am 'feat: added something absolutely cracked'`)
-6. Push to the branch (`git push origin feature/something_fire`)
-7. Create a new Pull Request
-
-### Development Requirements
-
-- Python 3.10+ (we using that future syntax fr fr)
-- Development dependencies (`pip install -e .[dev]`)
-- A sense of humor (required for reading the codebase)
-
-## 🔬 Testing
-
-Run tests like you're trying to speedrun a 100% completion:
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage (see what parts of the code never got executed)
-pytest --cov=smolswarms
-
-# Run specific test file (when you know exactly what you broke)
-pytest tests/test_specific_feature.py
-```
-
-## 📝 License
-
-MIT License - go wild fam (but responsibly) 🚀
-
-## 🤖 Integration with OpenHands
-
-Need help fixing bugs or implementing features? Just tag `@openhands-agent` in your issue or PR:
-
-```markdown
-Hey @openhands-agent, this feature be acting more cursed than a Python script with mixed tabs and spaces. Help a dev out?
-```
-
-The agent will analyze your issue and try to fix it faster than a speedrunner finding a new glitch!
-
-## ⚠️ Safety Notice
-
-While smolswarms is designed to be more autonomous than a Tesla on autopilot, remember:
-- Don't give agents access to prod without supervision
-- Keep API costs under control (no infinite token glitch)
-- Monitor agent behavior (they do be learning fr fr)
-
-Need help or got questions? Drop an issue or hit us up - we're more responsive than a Discord mod during a raid! 🎮
+*Remember: With great power comes great responsibility... and with SmolSwarms, you've got more power than a Discord mod during a raid.* 💪

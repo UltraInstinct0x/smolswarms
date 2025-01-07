@@ -9,6 +9,7 @@ Welcome to the most ambitious crossover event since my last git merge conflict f
 - [x] Basic agent coordination (more synchronized than gamers during a raid)
 - [x] Memory persistence system (because amnesia ain't the vibe)
 - [x] OpenHands integration (AI helping AI, we really in the future)
+- [x] LibreChat integration (respect to the OGs who paved the way)
 - [ ] Token economy system (keeping them API costs lower than my self-esteem)
 
 ### Agent Capabilities (The Skill Tree)
@@ -21,6 +22,7 @@ Welcome to the most ambitious crossover event since my last git merge conflict f
 - [x] GitHub Actions CI/CD (more reliable than my alarm clock)
 - [x] Automated testing (trust but verify fr fr)
 - [x] Documentation system (more thorough than my Google search history)
+- [x] Docker deployment (based on LibreChat's solid foundation)
 - [ ] Performance monitoring (watching them metrics like a helicopter parent)
 
 ## Under Construction 🚧

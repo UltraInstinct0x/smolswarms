@@ -22,6 +22,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - [ ] Self-rewriting code capabilities (what could possibly go wrong?)
 - [ ] Meta-learning swarms (AI agents that learn how to learn, no cap)
 
+### Added ✨
+- [x] Integrated LibreChat's Docker setup (standing on the shoulders of giants fr fr)
+- [x] Custom swarm-specific Docker configurations (more organized than my desktop)
+- [x] Streamlined deployment process (smoother than my git history)
+
+### Changed 🔄
+- [x] Moved to LibreChat's Docker infrastructure (respect to the OGs)
+- [x] Updated documentation to reflect new Docker setup (more clear than my career path)
+- [x] Reorganized project structure (cleaner than my room will ever be)
+
 ## [0.1.0] - 2024-01-07 - The Genesis Drop 🚀
 
 ### Added ✨
