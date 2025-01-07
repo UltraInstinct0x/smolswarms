@@ -1,51 +1,68 @@
-name: 🚀 Feature request
-description: Suggest an idea that would make this framework go even harder
-title: "[Feature]: "
-labels: ["enhancement"]
+name: 🚀 Feature Request
+description: Suggest a feature that's more fire than a RGB gaming setup
+title: "feat: "
+labels: ["enhancement", "fix-me"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this feature request! Let's make AI swarms even more based.
+        Thanks for dropping this feature request fr fr! Let's make SmolSwarms more cracked than ever 🔥
         
   - type: textarea
-    id: problem
+    id: feature-description
     attributes:
-      label: Is your feature request related to a problem?
-      description: What's the pain point you're trying to solve?
-      placeholder: "I'm always frustrated when my agents can't [...]"
+      label: 📝 Feature Description
+      description: Tell us what kind of feature would make SmolSwarms hit even more different
+      placeholder: "I want SmolSwarms to be able to..."
     validations:
       required: true
       
   - type: textarea
-    id: solution
+    id: proposed-solution
     attributes:
-      label: Describe the solution you'd like
-      description: What should the feature do?
-      placeholder: "The agents should be able to [...]"
+      label: 💡 Proposed Solution
+      description: Drop your galaxy brain ideas on how to implement this
+      placeholder: "We could..."
     validations:
       required: true
       
   - type: textarea
-    id: alternatives
+    id: code-example
     attributes:
-      label: Describe alternatives you've considered
-      description: What other approaches could work?
+      label: 🧑‍💻 Usage Example
+      description: Show us how you'd want to use this feature (the more cursed the better)
+      render: python
+      placeholder: |
+        from smolswarms import SwarmFactory
+        
+        # Your absolutely cracked example here
+        swarm = SwarmFactory().spawn_hivemind(
+            vibe_check=True,
+            power_level="over9000"
+        )
+    validations:
+      required: false
       
   - type: dropdown
     id: priority
     attributes:
-      label: Priority
+      label: 🎯 Priority
+      description: How urgently do we need this to go brrr?
       options:
-        - Critical (breaks core functionality)
-        - High (major improvement)
-        - Medium (nice to have)
-        - Low (would be cool)
+        - "🐌 Low: Would be nice to have"
+        - "🚶‍♂️ Medium: Pretty useful fr fr"
+        - "🏃‍♂️ High: Need this ASAP no cap"
+        - "🚀 Critical: System literally unusable without it"
     validations:
       required: true
-      
-  - type: textarea
-    id: context
+
+  - type: checkboxes
+    id: terms
     attributes:
-      label: Additional context
-      description: Add any other context, code examples, or references for the feature
+      label: 📜 Guidelines
+      description: By submitting this issue, you agree to the following
+      options:
+        - label: I checked existing issues to avoid dropping duplicate requests
+          required: true
+        - label: I added enough context for @openhands-agent to understand the vibe
+          required: true

@@ -1,65 +1,92 @@
 name: 🐛 Bug Report
-description: Something ain't working right? Let's fix that
-title: "[Bug]: "
-labels: ["bug", "triage"]
+description: Report a bug that's more cursed than a recursive function with no base case
+title: "fix: "
+labels: ["bug", "fix-me"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! Let's make this framework less cursed together.
+        Thanks for reporting this bug! Let's get this fixed faster than a speedrunner finds glitches 🏃‍♂️
         
   - type: textarea
-    id: what-happened
+    id: bug-description
     attributes:
-      label: What happened?
-      description: Also tell us what you expected to happen
-      placeholder: "My agent swarm started mining bitcoin instead of analyzing metrics 💀"
+      label: 🐞 Bug Description
+      description: Tell us what's not vibing right
+      placeholder: "The agent swarm is doing something more cursed than expected..."
     validations:
       required: true
       
   - type: textarea
     id: reproduction
     attributes:
-      label: Reproduction Steps
-      description: How do we summon this bug?
+      label: 🔄 Steps to Reproduce
+      description: Drop the steps to summon this bug like it's a Dark Souls boss
       placeholder: |
-        1. Spawn a swarm with config '...'
-        2. Tell it to do '...'
-        3. Watch everything go wrong at '...'
+        1. Import SwarmFactory
+        2. Configure it with...
+        3. Watch everything go wrong when...
     validations:
       required: true
       
   - type: textarea
-    id: logs
+    id: expected
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output
-      render: shell
+      label: 💭 Expected Behavior
+      description: What should've happened if everything was bussin?
+      placeholder: "The agents should've..."
+    validations:
+      required: true
       
-  - type: dropdown
-    id: environment
+  - type: textarea
+    id: actual
     attributes:
-      label: Environment
-      options:
-        - Development
-        - Staging
-        - Production
-        - The Shadow Realm
+      label: 😱 Actual Behavior
+      description: What actually happened that's got you more stressed than a Python script with no type hints?
+      placeholder: "Instead, the agents..."
     validations:
       required: true
       
   - type: input
     id: version
     attributes:
-      label: Version
-      description: What version of smolswarms are you running?
+      label: 📦 Version
+      description: What version of SmolSwarms are you running?
       placeholder: "0.1.0"
     validations:
       required: true
       
   - type: textarea
-    id: context
+    id: environment
     attributes:
-      label: Additional context
-      description: Add any other context about the problem here
-      placeholder: "My agents are running on a quantum computer powered by memes"
+      label: 🌎 Environment
+      description: Drop your setup details
+      value: |
+        - OS: [e.g. Ubuntu 22.04]
+        - Python version: [e.g. 3.10]
+        - Relevant dependencies:
+          ```
+          smolagents==1.1.0
+          ```
+    validations:
+      required: true
+      
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📝 Relevant Logs
+      description: Drop any error logs or outputs that might help (they'll be automatically formatted)
+      render: python
+      
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📜 Guidelines
+      description: By submitting this issue, you agree to the following
+      options:
+        - label: I checked existing issues to avoid duplicate bug reports
+          required: true
+        - label: I added enough context for @openhands-agent to debug the issue
+          required: true
+        - label: I've included all relevant code and error messages
+          required: true
