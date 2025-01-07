@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Spawn and orchestrate autonomous AI agent swarms that actually do be hitting different fr fr"
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.10"
+requires-python = ">=3.10"  # We only fw with modern Python fr fr
 authors = [
     { name = "Gokhan Guney", email = "your.email@example.com" },
 ]
@@ -25,17 +25,17 @@ dev = [
     "pytest-cov>=4.0.0",
     "black>=23.0.0",
     "ruff>=0.5.0",
-    "mypy>=1.0.0"
+    "mypy>=1.0.0",
 ]
 
 [tool.black]
 line-length = 88
-target-version = ['py310']
+target-version = ['py310']  # That new Python syntax hits different
 
 [tool.ruff]
 line-length = 88
 target-version = "py310"
-select = ["E", "F", "B", "I"]
+select = ["E", "F", "B", "I"]  # More strict than a Discord server's automod
 
 [tool.mypy]
 python_version = "3.10"
