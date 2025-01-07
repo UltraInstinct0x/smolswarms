@@ -1,0 +1,23 @@
+name: OpenHands AI Developer
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  develop:
+    if: github.event.label.name == 'ai-dev'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run OpenHands
+        uses: all-hands-ai/openhands-action@v0.18
+        with:
+          model: anthropic/claude-3-5-sonnet-20241022
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Optional settings:
+          # max_cost: 10 # Maximum cost in USD
+          # max_time: 3600 # Maximum runtime in seconds
+          # log_level: debug # Verbosity of logs

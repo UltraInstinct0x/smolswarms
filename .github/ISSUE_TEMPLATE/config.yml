@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussion Board
+    url: https://github.com/UltraInstinct0x/smolswarms/discussions
+    about: For general questions and discussions about smolswarms
+  - name: 📚 Documentation
+    url: https://docs.smolswarms.ai
+    about: Check out our documentation first

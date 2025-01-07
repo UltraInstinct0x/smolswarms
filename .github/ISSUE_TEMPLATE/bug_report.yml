@@ -1,0 +1,65 @@
+name: 🐛 Bug Report
+description: Something ain't working right? Let's fix that
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Let's make this framework less cursed together.
+        
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us what you expected to happen
+      placeholder: "My agent swarm started mining bitcoin instead of analyzing metrics 💀"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: How do we summon this bug?
+      placeholder: |
+        1. Spawn a swarm with config '...'
+        2. Tell it to do '...'
+        3. Watch everything go wrong at '...'
+    validations:
+      required: true
+      
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output
+      render: shell
+      
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Development
+        - Staging
+        - Production
+        - The Shadow Realm
+    validations:
+      required: true
+      
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of smolswarms are you running?
+      placeholder: "0.1.0"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here
+      placeholder: "My agents are running on a quantum computer powered by memes"
