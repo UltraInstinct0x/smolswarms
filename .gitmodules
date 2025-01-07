@@ -1,6 +1,6 @@
-[submodule "apps/chat/librechat"]
-	path = apps/chat/librechat
+[submodule "smolswarms/apps/chat/librechat"]
+	path = smolswarms/apps/chat/librechat
 	url = https://github.com/danny-avila/LibreChat.git
-[submodule "apps/saas/wasp-saas"]
-	path = apps/saas/wasp-saas
+[submodule "smolswarms/apps/saas/wasp-saas"]
+	path = smolswarms/apps/saas/wasp-saas
 	url = https://github.com/wasp-lang/open-saas.git
