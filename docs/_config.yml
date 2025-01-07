@@ -1,0 +1,49 @@
+remote_theme: pmarsceill/just-the-docs
+
+# Site settings
+title: SmolSwarms Docs
+description: Documentation that hits different fr fr 🌊
+baseurl: "/smolswarms"
+url: "https://ultrainstinct0x.github.io"
+
+# Theme settings
+color_scheme: dark
+search_enabled: true
+heading_anchors: true
+
+# Aux links for the upper right navigation
+aux_links:
+  "SmolSwarms on GitHub":
+    - "//github.com/ultrainstinct0x/smolswarms"
+
+# Makes Aux links open in a new tab
+aux_links_new_tab: true
+
+# Custom footer content
+footer_content: "No cap, just clean docs fr fr 🚀"
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Collections for docs structure
+collections:
+  guides:
+    permalink: "/:collection/:path/"
+    output: true
+  reference:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Default YAML frontmatter settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "_guides"
+    values:
+      layout: "guide"
