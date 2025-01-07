@@ -1,6 +1,6 @@
 # 🌊 smolswarms
 
-> Because why spawn one AI when you can spawn them all? 
+> Because why spawn one AI when you can spawn them all?
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
@@ -126,7 +126,7 @@ Need help fixing bugs or implementing features? Just tag `@openhands-agent` in y
 Hey @openhands-agent, this feature be acting more cursed than a Python script with mixed tabs and spaces. Help a dev out?
 ```
 
-The agent will analyze your issue and try to fix it faster than a speedrunner finding a new glitch! 
+The agent will analyze your issue and try to fix it faster than a speedrunner finding a new glitch!
 
 ## ⚠️ Safety Notice
 

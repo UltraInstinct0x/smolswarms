@@ -24,7 +24,7 @@ Before diving in deeper than a speedrunner looking for glitches, here's what you
    # Create a venv (isolation more important than a Minecraft bedrock wall)
    python -m venv venv
    source venv/bin/activate  # or .\venv\Scripts\activate on Windows
-   
+
    # Install dependencies (with that developer DLC)
    pip install -e .[dev]
    ```
@@ -45,7 +45,7 @@ Before diving in deeper than a speedrunner looking for glitches, here's what you
    ```bash
    # Run the whole test suite
    pytest
-   
+
    # Check coverage (gotta hit that 100% fr fr)
    pytest --cov=smolswarms
    ```
@@ -54,10 +54,10 @@ Before diving in deeper than a speedrunner looking for glitches, here's what you
    ```bash
    # Format your code (make it cleaner than a fresh install)
    black .
-   
+
    # Run the linter (find bugs before they find you)
    ruff check .
-   
+
    # Type check (because dynamic typing is too yolo)
    mypy smolswarms/
    ```

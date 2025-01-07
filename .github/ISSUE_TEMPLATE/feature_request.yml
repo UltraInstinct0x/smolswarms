@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Thanks for dropping this feature request fr fr! Let's make SmolSwarms more cracked than ever 🔥
-        
+
   - type: textarea
     id: feature-description
     attributes:
@@ -16,7 +16,7 @@ body:
       placeholder: "I want SmolSwarms to be able to..."
     validations:
       required: true
-      
+
   - type: textarea
     id: proposed-solution
     attributes:
@@ -25,7 +25,7 @@ body:
       placeholder: "We could..."
     validations:
       required: true
-      
+
   - type: textarea
     id: code-example
     attributes:
@@ -34,7 +34,7 @@ body:
       render: python
       placeholder: |
         from smolswarms import SwarmFactory
-        
+
         # Your absolutely cracked example here
         swarm = SwarmFactory().spawn_hivemind(
             vibe_check=True,
@@ -42,7 +42,7 @@ body:
         )
     validations:
       required: false
-      
+
   - type: dropdown
     id: priority
     attributes:

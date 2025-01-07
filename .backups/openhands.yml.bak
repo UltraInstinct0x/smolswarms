@@ -8,10 +8,10 @@ jobs:
   develop:
     if: github.event.label.name == 'ai-dev'
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Run OpenHands
         uses: all-hands-ai/openhands-action@v0.18
         with:

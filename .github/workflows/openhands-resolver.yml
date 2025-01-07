@@ -19,10 +19,10 @@ jobs:
     if: |
       (github.event_name == 'issues' && github.event.label.name == 'fix-me') ||
       (contains(github.event.comment.body, '@openhands-agent'))
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: OpenHands Magic ✨
         uses: all-hands-ai/openhands-resolver@latest
         env:
