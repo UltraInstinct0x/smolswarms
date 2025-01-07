@@ -1,6 +1,9 @@
 # Python
 __pycache__/
 .backups/
+.venv/
+.env/
+.envrc/
 *.py[cod]
 *$py.class
 *.so
