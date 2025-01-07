@@ -35,12 +35,12 @@ target-version = ['py310']
 [tool.ruff]
 line-length = 88
 target-version = "py310"
-select = ["E", "F", "B", "I"]  # We moved this up because ruff be acting more temperamental than a Discord bot with 999ms ping
 
-[tool.ruff.isort]  # Simplified this whole section because nested TOML tables were causing more drama than a Minecraft server without admins
+[tool.ruff.lint]
+select = ["E", "F", "B", "I"]
+
+[tool.ruff.lint.isort]
 force-single-line = true
-lines-between-types = 1
-order-by-type = true
 known-first-party = ["smolswarms"]
 
 [tool.mypy]
