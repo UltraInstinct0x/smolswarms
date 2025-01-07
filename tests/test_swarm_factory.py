@@ -1,24 +1,29 @@
-import unittest
+"""Tests for SwarmFactory."""
+
 from smolswarms.swarm_factory import SwarmFactory
 
-class TestSwarmFactory(unittest.TestCase):
-    def test_spawn_department_optimize_tokens(self):
-        factory = SwarmFactory()
-        swarm = factory.spawn_department({
-            "business_unit": "test_team",
+
+def test_spawn_department() -> None:
+    """Test spawning a department."""
+    factory = SwarmFactory()
+    swarm = factory.spawn_department(
+        {
+            "business_unit": "growth_team",
             "budget": "optimize_tokens",
-            "vibe": "test_vibe"
-        })
-        self.assertIsNone(swarm)  # Add more specific assertions based on expected behavior
+            "vibe": "hypergrowth",
+        }
+    )
+    assert swarm is None
 
-    def test_spawn_department_default_budget(self):
-        factory = SwarmFactory()
-        swarm = factory.spawn_department({
-            "business_unit": "test_team",
-            "budget": "default",
-            "vibe": "test_vibe"
-        })
-        self.assertIsNone(swarm)  # Add more specific assertions based on expected behavior
 
-if __name__ == '__main__':
-    unittest.main()
+def test_spawn_department_with_different_budget() -> None:
+    """Test spawning a department with a different budget."""
+    factory = SwarmFactory()
+    swarm = factory.spawn_department(
+        {
+            "business_unit": "growth_team",
+            "budget": "unlimited",
+            "vibe": "hypergrowth",
+        }
+    )
+    assert swarm is None
