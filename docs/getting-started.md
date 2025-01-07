@@ -23,7 +23,7 @@ Before we start cooking, make sure you've got:
 pip install smolswarms
 
 # Or if you're feeling spicy, install from source
-git clone https://github.com/gokhanguney/smolswarms.git
+git clone https://github.com/ultrainstinct0x/smolswarms.git
 cd smolswarms
 pip install -e .
 ```

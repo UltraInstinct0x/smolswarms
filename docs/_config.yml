@@ -3,11 +3,11 @@ title: SmolSwarms
 description: A Python library for building and coordinating swarms of AI agents that hit different fr fr 🤖
 theme: just-the-docs
 
-url: https://gokhanguney.github.io/smolswarms
+url: https://ultrainstinct0x.github.io/smolswarms
 
 aux_links:
   "SmolSwarms on GitHub":
-    - "https://github.com/gokhanguney/smolswarms"
+    - "https://github.com/ultrainstinct0x/smolswarms"
 
 # Enable or disable the site search
 search_enabled: true
@@ -34,7 +34,7 @@ callouts:
     color: green
 
 # Footer content
-footer_content: "Made with 💜 by <a href=\"mailto:g_guney@icloud.com\">@gokhanguney</a>"
+footer_content: "Made with 💜 by <a href=\"mailto:g_guney@icloud.com\">@ultrainstinct0x</a>"
 
 # Back to top link
 back_to_top: true
@@ -43,7 +43,7 @@ back_to_top_text: "Back to top"
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/gokhanguney/smolswarms"
+gh_edit_repository: "https://github.com/ultrainstinct0x/smolswarms"
 gh_edit_branch: "main"
 gh_edit_source: docs
 gh_edit_view_mode: "tree"

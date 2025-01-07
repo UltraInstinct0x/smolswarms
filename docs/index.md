@@ -57,14 +57,14 @@ pip install smolswarms  # real ones use pip
 ## Documentation 📚
 
 Check out our docs (you're looking at them rn) for:
-- [Getting Started](./getting-started.html) - Zero to hero, no cap
-- [API Reference](./api-reference.html) - The sacred texts
-- [Examples](./examples.html) - See it in action
-- [Changelog](../CHANGELOG.md) - What's new in the multiverse
+- [Getting Started](getting-started.html) - Zero to hero, no cap
+- [API Reference](api-reference.html) - The sacred texts
+- [Examples](examples.html) - See it in action
+- [Changelog](https://github.com/ultrainstinct0x/smolswarms/blob/main/CHANGELOG.md) - What's new in the multiverse
 
 ## Contributing 🤝
 
-We're always looking for more agents to join our swarm! Check out our [Contributing Guide](../CONTRIBUTING.md) to learn how to:
+We're always looking for more agents to join our swarm! Check out our [Contributing Guide](https://github.com/ultrainstinct0x/smolswarms/blob/main/CONTRIBUTING.md) to learn how to:
 - Report bugs (the uncool kind)
 - Suggest features (the cool kind)
 - Submit PRs (the really cool kind)
