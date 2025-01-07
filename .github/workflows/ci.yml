@@ -14,52 +14,68 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true  # Cancel any % runs when new commits drop
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
 
 jobs:
   lint:
+    name: "🧹 Lint"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+      - name: "🐍 Set up Python 3.10"
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+          cache: pip
           
-      - name: Install dependencies
+      - name: "📦 Install dependencies"
         run: |
           python -m pip install --upgrade pip
           pip install -e .[dev]
           
-      - name: Vibe check with ruff
+      - name: "✨ Vibe check with ruff"
         run: ruff check .
         
-      - name: Format check with black
+      - name: "🎨 Format check with black"
         run: black . --check
         
-      - name: Type check with mypy
+      - name: "🔍 Type check with mypy"
         run: mypy smolswarms/
 
   test:
-    needs: lint  # Gotta pass the vibe check first
+    name: "🧪 Test (Python ${{ matrix.python-version }})"
+    needs: lint
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11"]  # Only modern Python fr fr
+        python-version: ["3.10", "3.11"]
+    
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+      - name: "🐍 Set up Python ${{ matrix.python-version }}"
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+          cache: pip
           
-      - name: Install dependencies
+      - name: "📦 Install dependencies"
         run: |
           python -m pip install --upgrade pip
-          pip install git+https://github.com/UltraInstinct0x/smolagents.git
           pip install -e .[dev]
           
-      - name: Run tests
-        run: pytest --cov=smolswarms
+      - name: "🧪 Run tests"
+        run: pytest --cov=smolswarms --cov-report=xml
+        
+      - name: "📊 Upload coverage"
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage.xml
+          fail_ci_if_error: true
