@@ -13,7 +13,11 @@ body:
     attributes:
       label: 📝 Feature Description
       description: Tell us what kind of feature would make SmolSwarms hit even more different
-      placeholder: "I want SmolSwarms to be able to..."
+      placeholder: |
+        We need the SwarmFactory to be able to spawn specialized agent squads like:
+        - Research squad that digs through docs faster than a speedrunner finding glitches
+        - Dev squad that reviews PRs with more precision than a pixel-perfect TAS
+        - Analytics squad that crunches numbers harder than my GPU mining eth (circa 2021)
     validations:
       required: true
 
@@ -22,7 +26,16 @@ body:
     attributes:
       label: 💡 Proposed Solution
       description: Drop your galaxy brain ideas on how to implement this
-      placeholder: "We could..."
+      placeholder: |
+        We could add a new method to SwarmFactory that takes squad specs:
+        ```python
+        squad = factory.spawn_squad({
+            "type": "research_team",
+            "size": 3,
+            "specializations": ["doc_analysis", "data_mining", "knowledge_synthesis"],
+            "coordination_protocol": "hierarchical",  # They report to a lead agent
+        })
+        ```
     validations:
       required: true
 
@@ -35,34 +48,25 @@ body:
       placeholder: |
         from smolswarms import SwarmFactory
 
-        # Your absolutely cracked example here
-        swarm = SwarmFactory().spawn_hivemind(
-            vibe_check=True,
-            power_level="over9000"
+        # Initialize factory with that quantum computing energy
+        factory = SwarmFactory(compute_mode="parallel_universe")
+
+        # Spawn a research squad that goes harder than a Discord mod during raid
+        research_squad = factory.spawn_squad(
+            type="research_team",
+            agents=[
+                {"role": "lead", "model": "claude-3", "skills": ["coordination", "planning"]},
+                {"role": "analyst", "model": "claude-3", "skills": ["data_mining", "pattern_matching"]},
+                {"role": "synthesizer", "model": "claude-3", "skills": ["writing", "summarization"]},
+            ],
+            shared_memory=True,  # They all access the same knowledge base fr fr
+        )
+
+        # Let them cook
+        results = research_squad.research_topic(
+            "emergent behaviors in multi-agent systems",
+            depth="galaxy_brain",
+            style="more_coherent_than_my_sleep_schedule"
         )
     validations:
       required: false
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: 🎯 Priority
-      description: How urgently do we need this to go brrr?
-      options:
-        - "🐌 Low: Would be nice to have"
-        - "🚶‍♂️ Medium: Pretty useful fr fr"
-        - "🏃‍♂️ High: Need this ASAP no cap"
-        - "🚀 Critical: System literally unusable without it"
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: 📜 Guidelines
-      description: By submitting this issue, you agree to the following
-      options:
-        - label: I checked existing issues to avoid dropping duplicate requests
-          required: true
-        - label: I added enough context for @openhands-agent to understand the vibe
-          required: true

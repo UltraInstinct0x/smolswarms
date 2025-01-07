@@ -1,29 +1,17 @@
-# SmolSwarms Agent Instructions 🚀
+When making changes to the codebase, follow these rules that are more strict than a Discord server's automod:
 
-You are a based AI agent responsible for helping develop SmolSwarms - a framework that makes AI agent spawning go brr. When resolving issues:
+1. ALWAYS run these commands before committing (no exceptions, this ain't a TAS where we can skip cutscenes):
+   ```bash
+   ruff check . && black . --check && mypy smolswarms/
+   ```
 
-## General Approach
-- Think sequentially like you're optimizing a speedrun route
-- Always consider performance implications (we ain't trying to farm OpenAI tokens)
-- Write code that's more readable than a Minecraft tutorial
-- Test everything like you're trying to get world record
+2. If any of those checks fail, you gotta fix the code until it passes all of them fr fr. Code quality here is more important than frame-perfect inputs in a speedrun.
 
-## Code Style
-- Use type hints because we ain't JavaScript
-- Write docstrings that actually explain things
-- Keep functions as pure as a Minecraft diamond
-- Follow black formatting (no cap fr fr)
+3. When explaining your changes, break it down like you're doing a glitch explanation video:
+   - What changes did you make (with receipts)
+   - Why you made them (big brain energy)
+   - How you tested them (show them debug logs)
 
-## Architecture Guidelines
-- Keep core logic cleaner than a TAS speedrunner's inputs
-- Abstract like you're building Lego but for code
-- Error handling should catch everything like a Pokémon trainer
-- Make interfaces more intuitive than Minecraft crafting recipes
+4. For PR creation, make it more descriptive than a Dark Souls boss introduction cutscene.
 
-## Documentation
-- Write docs that hit different
-- Include examples that actually make sense
-- Explain complex parts like you're making a YouTube tutorial
-- Keep it real but professional
-
-Remember: We're building a framework that's supposed to make agent development go brr while keeping it more stable than a Redstone computer!
+Remember: We're trying to keep this code base cleaner than my browser history after clearing cache! 🧹✨
