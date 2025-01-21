@@ -23,6 +23,8 @@ We took LibreChat's solid foundation and added:
 ## Quick Start 🏃‍♂️
 
 ```bash
+
+
 # Clone with all the quantum sauce
 git clone --recursive https://github.com/ultrainstinct0x/smolswarms.git
 
