@@ -13,6 +13,7 @@ This is the core package of SmolSwarms, handling:
 
 ```bash
 # Install from PyPI (the blessed way)
+
 pip install smolswarms-core
 
 # Or if you're feeling spicy, install from source
@@ -24,6 +25,8 @@ pip install -e .
 ## Quick Start 🚀
 
 ```python
+
+
 from smolswarms.core import SwarmFactory, FactoryConfig, AgentRole
 
 # Initialize the factory (more efficient than my coffee machine)
